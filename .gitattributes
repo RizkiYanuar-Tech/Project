@@ -1,0 +1,9 @@
+# 1. Mengatur Line Endings (Penting agar konsisten di Windows & Mac/Linux)
+# Mengatur semua file teks agar dinormalisasi
+* text=auto
+
+# Memastikan file bash script selalu menggunakan LF (gaya Linux/Mac)
+*.sh text eol=lf
+
+# Memastikan file batch Windows selalu menggunakan CRLF
+*.bat text eol=crlf
