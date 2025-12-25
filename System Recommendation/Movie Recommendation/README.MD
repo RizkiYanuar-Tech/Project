@@ -5,4 +5,4 @@ This project aims to build recommendation system that can provide users with mov
 
 ## OVERVIEW
 This sistem developed through two main step split by two notebook:
-1. **Notebook 1 [Preprocessing_User_Attribute](System Recommendation\Movie Recommendation\Preprocessing_User_Attribute.ipynb)
+1. **Notebook 1 [Preprocessing_User_Attribute](https://github.com/RizkiYanuar-Tech/Project/blob/master/System%20Recommendation/Movie%20Recommendation/AUC%2C_Recall_K%2C_Precision_K.ipynb)**
