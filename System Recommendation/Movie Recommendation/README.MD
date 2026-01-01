@@ -108,22 +108,21 @@ The dataset used sourced from [Movielens-1M](https://grouplens.org/datasets/movi
 
 ## 📚 Library
 * **Python**
-* **Pandas** (Data Manipulation)
-* **matplotlib** (Data Visualization)
-* **Pytorch (Torch)** (Deep Learning Framework)
-* **Pytorch Geometric 2.7.0 (PyG)** (Graph Neural Network Library)
-* **Scikit-learn** (Metrics & Preprocessing)
-* **torchmetrics 1.7.3** (Evaluation Metrics)
-* **torch-scatter 2.1.2** (Graph Operations)
+* **Pandas**
+* **Matplotlib**
+* **PyTorch (Torch):** Framework Deep Learning (version 2.0.0).
+* **PyTorch Geometric (PyG):** Library khusus untuk Graph Neural Network (version 2.7.0).
+* **Torch Scatter:** Operasi sparse updates untuk Graph (version 2.1.2).
+* **Scikit-learn:** Preprocessing data dan metrik evaluasi standar.
+* **Torchmetrics:** Koleksi metrik evaluasi khusus untuk PyTorch (version 1.7.3).
 
 ## Installation
 ### installation for colab/standard setup
 ```bash
-pip install torch
-pip install torch-geometrics
-pip install torchmetrics==1.7.3
-pip install torch-scatter -f [https://data.pyg.org/whl/torch-2.0.0+cu118.html](https://data.pyg.org/whl/torch-2.0.0+cu118.html)
-pip install pandas scikit-learn matplotlib
+conda install pytorch==2.0.0 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+pip install git+https://github.com/pyg-team/pytorch_geometric.git
+conda install pandas matplotlib scikit-learn torchmetrics -c conda-forge
 ```
 
 ### Installation for conda env
@@ -133,19 +132,9 @@ conda create -n nama_environment python=3.10
 conda activate nama_environment
 ```
 
-2. Install Pytorch (Adjust cuda version based on GPU)
+2. Install library on requirements.txt
 ```bash
-conda install pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
-```
-
-3. Install Pytorch Geometric & Scatter
-```bash
-conda install torch-scatter- f [https://data.pyg.org/whl/torch-2.0.0+cu118.html](https://data.pyg.org/whl/torch-2.0.0+cu118.html)
-```
-
-4. Install other library
-```bash
-conda install pandas scikit-learn matplotlib torchmetric==1.7.3 -c conda-forge
+pip install -r requirements.txt
 ```
 
 # 📈 Model Performance
