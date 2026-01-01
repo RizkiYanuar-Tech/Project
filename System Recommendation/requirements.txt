@@ -1,0 +1,19 @@
+# --- PyTorch Core (Pip version compatible with CUDA 11.8) ---
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.0.0+cu118
+torchvision
+torchaudio
+
+# --- PyG Dependencies (Binaries for Torch 2.0.0 + CUDA 11.8) ---
+--find-links https://data.pyg.org/whl/torch-2.0.0+cu118.html
+torch-scatter==2.1.2
+torch-sparse
+
+# --- PyTorch Geometric ---
+git+https://github.com/pyg-team/pytorch_geometric.git
+
+# --- Data Science & Metrics ---
+pandas
+matplotlib
+scikit-learn
+torchmetrics==1.7.3
