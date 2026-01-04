@@ -12,6 +12,7 @@ Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
 -   Input Shape: Merubah ukuran citra (resize ) untuk menyesuaikan input model
 
 ## 📂 Project Structure
+```bash
 ├── modeltfjs/
 │   └── model.json
 │── saved_model/ 
@@ -24,6 +25,7 @@ Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
 │── Klasifikasi_Gambar.ipynb
 │── README.MD
 └── requirements.txt
+```
 
 ## 🧾 Dataset
 Dataset yang digunakan berasal dari Kaggle: Garbage Classification V2
@@ -31,25 +33,25 @@ Dataset yang digunakan berasal dari Kaggle: Garbage Classification V2
 *   Jumlah Kategori: 10 Kategori
 *   Daftar Kelas:
 
-    1.  Battery
+    *  Battery
 
-    2.  Biological
+    *  Biological
 
-    3.  Cardboard
+    *  Cardboard
 
-    4.  Clothes
+    *  Clothes
 
-    5.  Glass
+    *  Glass
 
-    6.  Metal
+    *  Metal
 
-    7.  Paper
+    *  Paper
 
-    8.  Plastic
+    *  Plastic
 
-    9.  Shoes
+    *  Shoes
 
-    10. Trash
+    * Trash
 
 ## 📚 Library
 Library yang digunakan dalam proyek:
