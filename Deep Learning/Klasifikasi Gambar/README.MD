@@ -1,15 +1,15 @@
 # 🗑️ Klasifikasi Gambar: Garbage Dataset
-Project ini merupakan model deep learning untuk mengklasifikasikan jenis sampah ke dalam 10 kategori berbeda menggunakan teknik transfer learning dengan arsitektur MobileNetV2.
+This project is a deep learning model for classifying waste types into 10 different categories using transfer learning techniques with the MobileNetV2 architecture.
 
 ## 🎯 PURPOSE
-Tujuan project ini adalah untuk mengembangkan model klasifikasi gambar yang akurat untuk mengenali berbagai jenis sampah.
+The aim of this project is to develop an accurate image classification model to recognise various types of waste.
 
 ## 📖 Overview
-Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
+This project uses Convolutional Neural Network (CNN) + transfer learning
 -   Base Model: MobileNetV2 (Pre-trained on ImageNet).
--   Feature Extraction: Layer pada MobileNetV2 dibekukan kecuali 10 layer terakhir untuk dilakukan fine-tuning
--   Custom Layers: Menambahkan layer konvolusi, GlobalAveragePooling, dan Dense Layer untuk klasifikasi spesifik.
--   Input Shape: Merubah ukuran citra (resize ) untuk menyesuaikan input model
+- Feature Extraction: Layers in MobileNetV2 are frozen except for the last 10 layers for fine-tuning
+- Custom Layers: Adding convolution layers, GlobalAveragePooling, and Dense Layers for specific classification.
+- Input Shape: Resizing images to fit the model input
 
 ## 📂 Project Structure
 ```bash
@@ -28,10 +28,10 @@ Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
 ```
 
 ## 🧾 Dataset
-Dataset yang digunakan berasal dari Kaggle: Garbage Classification V2
-*   Sumber: [Garbage Classification V2](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)
-*   Jumlah Kategori: 10 Kategori
-*   Daftar Kelas:
+The dataset used is from Kaggle: Garbage Classification V2
+*   Source: [Garbage Classification V2](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)
+*   Number of Categories: 10 Kategori
+*   Class List:
 
     *  Battery
 
@@ -54,8 +54,9 @@ Dataset yang digunakan berasal dari Kaggle: Garbage Classification V2
     * Trash
 
 ## 📚 Library
-Library yang digunakan dalam proyek:
-*   TensorFlow * Keras
+Libraries used in the project:
+*   TensorFlow 
+*   Keras
 *   Numpy
 *   Matplotlib & Seaborn
 *   Pandas
@@ -63,26 +64,26 @@ Library yang digunakan dalam proyek:
 *   OpenCV & PIL
 
 ## Installation
-## Menggunakan Conda
+## Conda environment
 ```bash
-# 1. Buat environment baru
+# 1. create new environment
 conda create -n garbage-class python=3.9
 
-# 2. Aktifkan environment
+# 2. activate environment
 conda activate garbage-class
 
-# 3. Install library yang dibutuhkan
+# 3. Install library
 conda install tensorflow pandas matplotlib seaborn scikit-learn opencv
 
 pip install scikit-image
 ```
 
-## Menggunakan starndar Environment (venv)
+##  standard Environment (venv)
 ```bash
-# 1. Buat virtual environment
+# 1. create virtual environment
 python -m venv venv
 
-# 2. Aktifkan environment
+# 2. activate environment
 # Windows:
 venv\Scripts\activate
 # macOS/Linux:
@@ -92,16 +93,16 @@ source venv/bin/activate
 pip install tensorflow pandas matplotlib seaborn scikit-learn opencv-python scikit-image
 ```
 # 🚀 How to Run
-1. Pastikan dataset sudah diunduh. Jika menggunakan Kaggle API (seperti di notebook), pastikan file kaggle.json sudah tersedia.
+1. Ensure that the dataset has been downloaded. If using the Kaggle API (as in the notebook), ensure that the kaggle.json file is available.
 
-2. Buka Jupyter Notebook atau Google Colab.
+2. Open Jupyter Notebook or Google Colab.
 
-3. Jalankan file Klasifikasi_Gambar.ipynb.
+3. Run the file Klasifikasi_Gambar.ipynb.
 
-4. Notebook akan melakukan ekstraksi data, preprocessing, pelatihan model, dan evaluasi.
+4. The notebook will perform data extraction, preprocessing, model training, and evaluation.
 
 ## 📊 Model Performance
-Berdasarkan hasil pelatihan terakhir (Epoch 10), model mencapai performa berikut:
+Based on the results of the last training (Epoch 10), the model achieved the following performance:
 *   Training Accuracy: 94%
 
 *   Validation Accuracy: 92%
