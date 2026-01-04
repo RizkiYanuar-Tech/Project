@@ -34,10 +34,12 @@ This project implements advanced techniques to optimize performace and accuracy
     this model treats Users, Movies, and Attributes as different nodes types, allowing network to learn rich semantic relationships
 
 ## PROJECT STRUCTURE
-| Description | Link |
-| :--- | :--- |
-| Setup data, preprocessing, and create graph | [Exploration and Preprocessing](https://github.com/RizkiYanuar-Tech/Project/blob/master/System%20Recommendation/Movie%20Recommendation/AUC%2C_Recall_K%2C_Precision_K.ipynb) |
-| Building Model & Evaluation | [Building Knowledge Graph Convolutional Network (KGCN) and Evaluation Model](https://github.com/RizkiYanuar-Tech/Project/blob/master/System%20Recommendation/Movie%20Recommendation/AUC%2C_Recall_K%2C_Precision_K.ipynb) |
+├── Garbage/
+│   ├── All_Data/          # Dataset gabungan yang terorganisir per kelas
+│   └── Augmented_Data/    # (Opsional) Hasil augmentasi gambar
+├── Klasifikasi_Gambar.ipynb # Main Notebook (Training & Evaluation)
+├── README.md              # Dokumentasi Proyek
+└── requirements.txt       # Daftar dependensi library
 
 ## 🧾 Dataset
 The dataset used sourced from [Movielens-1M](https://grouplens.org/datasets/movielens/) contains three main file:
