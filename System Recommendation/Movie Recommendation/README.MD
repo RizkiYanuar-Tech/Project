@@ -34,12 +34,15 @@ This project implements advanced techniques to optimize performace and accuracy
     this model treats Users, Movies, and Attributes as different nodes types, allowing network to learn rich semantic relationships
 
 ## PROJECT STRUCTURE
-├── Garbage/
-│   ├── All_Data/          # Dataset gabungan yang terorganisir per kelas
-│   └── Augmented_Data/    # (Opsional) Hasil augmentasi gambar
-├── Klasifikasi_Gambar.ipynb # Main Notebook (Training & Evaluation)
-├── README.md              # Dokumentasi Proyek
-└── requirements.txt       # Daftar dependensi library
+```bash
+├── Dataset/
+│   ├── movies.csv
+│   ├── ratings.csv
+	└── users.csv
+├── Model_Evaluation.ipynb
+├── README.md
+└── requirements.txt
+```
 
 ## 🧾 Dataset
 The dataset used sourced from [Movielens-1M](https://grouplens.org/datasets/movielens/) contains three main file:
