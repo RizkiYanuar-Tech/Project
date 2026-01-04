@@ -12,6 +12,7 @@ Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
 -   Input Shape: Merubah ukuran citra (resize ) untuk menyesuaikan input model
 
 ## 📂 Project Structure
+```bash
 ├── modeltfjs/
 │   └── model.json
 │── saved_model/ 
@@ -24,6 +25,7 @@ Project ini menggunakan Convolutional Neural Network (CNN) + transfer learning
 │── Klasifikasi_Gambar.ipynb
 │── README.MD
 └── requirements.txt
+```
 
 ## 🧾 Dataset
 Dataset yang digunakan berasal dari Kaggle: Garbage Classification V2
