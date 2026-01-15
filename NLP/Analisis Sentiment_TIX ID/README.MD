@@ -99,7 +99,15 @@ jupyter notebook "Submission_Analisis_Sentiment_Muhammad_Rizki_Yanuar.ipynb"
 
 # 📊 Model Performance
 The project compares the performance of two models. Below are the results obtained from the testing dataset:
-1. splitting 80:20
-
+1. splitting 70:30
+|Model|Accuracy Train|Accuracy Test|
+| Decision Tree | 0.982 | 0.915 |
+| Random Forest | 0.982 | 0.931 |
 
 2. splitting 70:30
+|Model|Accuracy Train|Accuracy Test|
+| Decision Tree | 0.981 | 0.915 |
+| Random Forest | 0.981 | 0.930 |
+
+# Conclusion
+After conducting 2 experiments with ratios 70:30 and 80:20 on two identical models, random forest and decision tree. Accuracy showed that in test data random forest models was superior than decision tree. So random forest will be used as main model for sentiment analysis
