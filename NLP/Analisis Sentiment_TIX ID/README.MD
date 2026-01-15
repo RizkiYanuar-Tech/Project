@@ -107,6 +107,7 @@ The project compares the performance of two models. Below are the results obtain
 | Random Forest | 0.982 | 0.931 |
 
 2. splitting 70:30
+
 |Model|Accuracy Train|Accuracy Test|
 | :---- | :-------: | -------: |
 | Decision Tree | 0.981 | 0.915 |
