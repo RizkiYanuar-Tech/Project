@@ -12,7 +12,6 @@ dagshub.init(repo_name=os.getenv('DAGSHUB_OWNER'),
              repo_owner=os.getenv('DAGSHUB_REPO'),
              mlflow=True
             )
-mlflow.set_tracking_uri('https://dagshub.com/<DagsHub-user-name>/<repository-name>.mlflow')
 
 def train_xgbranker(datas):
     cat_cols = ['query_class', 'category_level_1', 'category_level_2', 'product_class']

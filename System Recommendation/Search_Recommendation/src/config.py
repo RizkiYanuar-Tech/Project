@@ -9,7 +9,8 @@ load_dotenv()
 client = QdrantClient(
     url='https://fe10d59c-045d-4bdd-aff6-b0a74d3d82e5.australia-southeast1-0.gcp.cloud.qdrant.io',
     api_key=os.getenv('API_KEY_QDRANT'),
-    cloud_inference=True
+    cloud_inference=True,
+    timeout=60.0
 )
 
 # Create Collection
