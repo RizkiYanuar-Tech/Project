@@ -77,25 +77,29 @@ def intent_classifier(intent_label, text_vector):
 
     return model
 
+dagshub.init(repo_name='Project', repo_owner='RizkiYanuar-Tech', mlflow=True)
+
 def training_model(model, X_train_tf, X_test_tf, y_train_tf, y_test_tf):
     # Enable autologging
     mlflow.tensorflow.autolog()
-    # EarlyStopping
-    early_stopping = EarlyStopping(
-        monitor='val_loss',
-        patience=5,
-        mode='min',
-        restore_best_weights=True,
-        verbose=1
-    )
 
-    history = model.fit(
-        X_train_tf, y_train_tf,
-        epochs=20,
-        verbose=2,
-        batch_size=32,
-        callbacks=[early_stopping],
-        validation_data=(X_test_tf, y_test_tf)
-    )
+    with mlflow.start_run(run_name="Intent_Classifier"):
+        # EarlyStopping
+        early_stopping = EarlyStopping(
+            monitor='val_loss',
+            patience=5,
+            mode='min',
+            restore_best_weights=True,
+            verbose=1
+        )
+
+        history = model.fit(
+            X_train_tf, y_train_tf,
+            epochs=20,
+            verbose=2,
+            batch_size=32,
+            callbacks=[early_stopping],
+            validation_data=(X_test_tf, y_test_tf)
+        )
 
     return history
