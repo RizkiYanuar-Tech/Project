@@ -9,8 +9,8 @@ import os
 
 def load_model():
     src_path = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(src_path, '..', 'model', 'classification_model.keras')
-    intent_vocab = os.path.join(src_path, '..', 'intent_vocab.pkl')
+    model_path = os.path.join(src_path, '..', 'model', 'classifier_intent.keras')
+    intent_vocab = os.path.join(src_path, '..', 'model', 'intent_vocab.pkl')
 
     if os.path.exists(model_path) and os.path.exists(intent_vocab):
         print("Model dan Vocabulary")
@@ -96,6 +96,14 @@ def rag_pipeline(query_user, model, intent_label):
     return fail
 
 if __name__=='__main__':
-    query = input("Apa yang ingin ditanyakan?")
-    model, intent_label = load_model()
-    rag_pipeline(query, model, intent_label)
+    try:
+        model, intent_label = load_model()
+        while True:
+            query = input("Apa yang ingin ditanyakan?\n")
+            if query.lower() == 'keluar':
+                print("Terima kasih!")
+                break
+            jawaban = rag_pipeline(query, model, intent_label)
+            print(f"Berikut Solusi yang bisa saya berikan:\n {jawaban}")
+    except Exception as e:
+        print(f"Error {e}")

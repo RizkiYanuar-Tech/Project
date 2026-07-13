@@ -77,9 +77,8 @@ def intent_classifier(intent_label, text_vector):
 
     return model
 
-dagshub.init(repo_name='Project', repo_owner='RizkiYanuar-Tech', mlflow=True)
-
 def training_model(model, X_train_tf, X_test_tf, y_train_tf, y_test_tf):
+    dagshub.init(repo_name='Project', repo_owner='RizkiYanuar-Tech', mlflow=True)
     # Enable autologging
     mlflow.tensorflow.autolog()
 

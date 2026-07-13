@@ -26,8 +26,8 @@ if not os.path.exists(folder_target):
 path_model = os.path.join(folder_target, 'classifier_intent.keras')
 model.save(path_model)
 
-intent_label = string_lookup.get_vocabulary()
-text_vector_list = text_vector.get_vocabulary()
+intent_label = [str(item) for item in string_lookup.get_vocabulary()]
+text_vector_list = [str(item) for item in text_vector.get_vocabulary()]
 
 path_intent = os.path.join(folder_target, 'intent_vocab.pkl')
 path_text_vocab = os.path.join(folder_target, 'text_vocabulary.pkl')
