@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from qdrant_client import QdrantClient, models
 from qdrant_client.models import Distance, VectorParams
 from dotenv import load_dotenv
@@ -7,12 +8,12 @@ from openai import OpenAI
 load_dotenv()
 
 qdrantclient = QdrantClient(
-    url=os.getenv("Qdrant_URL"),
-    api_key=os.getenv("Qdrant_API"),
+    url=st.secrets["Qdrant_URL"],
+    api_key=st.secrets["Qdrant_API"],
     cloud_inference=True
 )
 
-collection_name=os.getenv('collection_name')
+collection_name=st.secrets['collection_name']
 
 if qdrantclient.collection_exists(collection_name=collection_name):
     print("Collection already exists")
@@ -33,6 +34,6 @@ else:
     )
 
 llm_client=OpenAI(
-    base_url=os.getenv("base_url"),
-    api_key=os.getenv("OpenRouter")
+    base_url=st.secrets['base_url'],
+    api_key=st.secrets['OpenRouter']
 )
